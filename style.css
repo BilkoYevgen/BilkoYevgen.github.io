@@ -1,0 +1,231 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,700");
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background: #1c92d2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #222;
+  font-family: "Droid Sans", sans-serif;
+  font-size: 14px;
+  position: relative;
+}
+
+a {
+  color: #2094d3;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+
+.navigation-top {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  padding: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.nav-header {
+  background: #fff;
+  padding: 10px 0;
+  transition: all 0.25s ease-out;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-header.fixed {
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.nav-header.fixed .menu-item a {
+  color: #fff;
+}
+.nav-header.fixed .menu-item a:hover {
+  border-bottom: solid 2px white;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu .menu-item {
+  flex: 1 1 auto;
+}
+.menu .menu-item.logo a {
+  font-size: 16px;
+  font-weight: bold;
+}
+.menu .menu-item a {
+  border-bottom: solid 2px transparent;
+  display: block;
+  padding: 10px 25px;
+  text-align: center;
+  transition: all 300ms;
+}
+.menu .menu-item a:hover {
+  border-bottom: solid 2px red;
+}
+
+.cover {
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50px;
+}
+.cover .full-image {
+  background: url("telegram-g404795525_1920.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .full-image p {
+  color: #2094d3;
+  font-weight: 700;
+  z-index: 1;
+  font-size: 100px;
+  background: white;
+  border-radius: 50px;
+}
+.cover .full-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section {
+  min-height: 250px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.section-header h1 {
+  padding: 20px 0 20px 220px;
+  text-align: center;
+  color: #5e4f9b;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 40px;
+}
+
+.section-content {
+  display: flex;
+}
+.section-content img {
+  flex: 0 0 250px;
+  height: auto;
+  width: 100px;
+  margin-right: 15px;
+}
+.section-content p {
+  flex: 1 1 auto;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  background: transparent;
+}
+
+.liq {
+  position: relative;
+  padding: 20px 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.liq span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial, serif;
+  letter-spacing: 8px;
+  z-index: 1;
+}
+
+.liq .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: #2094d3;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.liq .liquid::after,
+.liq .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.liq .liquid::before {
+
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.liq .liquid::after {
+
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+.liq:hover .liquid{
+  top: -120px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
