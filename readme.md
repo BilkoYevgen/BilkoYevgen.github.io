@@ -1,1 +1,1 @@
-Readme will be added later
+The Telegram bot is a versatile tool that offers users a range of helpful features to assist with daily tasks. Telegram bot is a powerful tool that offers several features to help users manage their daily routines effectively. The medication reminders, currency exchange rate, task manager, and phonebook features make it a convenient and practical tool for a wide range of users.
